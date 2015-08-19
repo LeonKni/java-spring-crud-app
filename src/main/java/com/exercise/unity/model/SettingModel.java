@@ -3,13 +3,11 @@ package com.exercise.unity.model;
 import java.io.Serializable;
 
 /**
- * SettingModel.java.
+ * SettingModel
  *
  * @author Leon K
  */
-public class SettingModel implements Serializable{
-
-    private static final long serialVersionUID = 8960206327144486292L;
+public class SettingModel implements Serializable {
 
     private String key;
     private String value;
