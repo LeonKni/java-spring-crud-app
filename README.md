@@ -1,29 +1,23 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
-
 ### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* Create, Read, Update, Delete, items(game settings) from a database via UI/API
 
 ### How do I get set up? ###
+* Configuration:
+    Install Java 7+
+    Install Apache Tomcat web server locally
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Database configuration: app will be connect to a hosted MYSQL database
 
-### Contribution guidelines ###
+* How to run tests:
+    Gradle script executes tests by default when building project
+    Manually: Go to src/test/java
+               -Right click > run all tests | or execute a single unit test
 
-* Writing tests
-* Code review
-* Other guidelines
+* Deployment instructions:
+    -Drop .war file in your local Tomcat's /webapps directory.
+        ex:  C:/apache-tomcat-7.0.63/webapps/unity-exercise-1.0.war
 
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* Repo owner or admin:
+    Leon Knights
