@@ -1,5 +1,8 @@
 package com.exercise.unity.domain;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 
 /**
@@ -9,16 +12,24 @@ import java.io.Serializable;
  */
 public class Setting implements Serializable {
     private static final long serialVersionUID = -5537825463775042905L;
+    @NotEmpty
+    @Pattern(regexp = "a-zA-Z0-9")
+    private String settingKey;
+    private String settingValue;
 
-    private int settingsGroupId;
-    private int settingsSubGroupId;
-
-    public int getSettingsGroupId() {
-        return settingsGroupId;
+    public String getSettingKey() {
+        return settingKey;
     }
 
-    public void setSettingsGroupId(int settingsGroupId) {
-        this.settingsGroupId = settingsGroupId;
+    public void setSettingKey(String settingKey) {
+        this.settingKey = settingKey;
     }
 
+    public String getSettingValue() {
+        return settingValue;
+    }
+
+    public void setSettingValue(String settingValue) {
+        this.settingValue = settingValue;
+    }
 }

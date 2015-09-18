@@ -1,0 +1,73 @@
+<!--Alert message-->
+<div class="container buttonContainerTop">
+    <div id="alert-sub-groups-success" class="alert alert-success fade in text-center " data-hide="alert"
+         style="display: none">
+    </div>
+    <div id="alert-sub-groups-error" class="alert alert-danger fade in text-center" data-hide="alert"
+         style="display: none">
+    </div>
+    <div id="alert-sub-groups-warn" class="alert alert-warning fade in text-center" data-hide="alert"
+         style="display: none">
+    </div>
+</div>
+
+<!--Sub-Groups-->
+<div id="table-panel-sub-groups" class="panel-heading text-center centered table-btn-panel small-table">
+    <button id="btn-save-sub-groups"
+            data-ng-click="subGroupsCtrl.save()"
+            class="pull-right btn btn-default btn-save"
+            title="Save changes">
+        Save
+    </button>
+    <h2 id="headingSubGroups" class="heading">Sub-Groups</h2>
+    <button data-ng-click="subGroupsCtrl.addRowSubGroups()"
+            type="button"
+            class="btn btn-default"
+            title="Add a sub-group">
+        Add
+    </button>
+    &nbsp;
+    &nbsp;
+    <button data-ng-click="subGroupsCtrl.deleteRow()"
+            type="button"
+            class="btn btn-danger"
+            title="Delete a sub-group">
+        Delete
+    </button>
+</div>
+<div id="table-container-sub-groups"
+     class="small-table tableContainer container-fluid panel panel-default panel-heading centered">
+    <table id="subGroupsTable" data-toggle="table"
+           class="centered-table table table-striped table-responsive table-bordered">
+        <thead>
+        <tr>
+            <th></th>
+            <th class="text-center">Name</th>
+            <th class="text-center">Group</th>
+        </tr>
+        </thead>
+        <tbody data-ng-controller="SubGroupsCtrl">
+        <tr data-ng-repeat="subGroup in subGroupsCtrl.subGroups">
+            <td>
+                <input name="checkbox" type="checkbox"/>
+            </td>
+            <td>
+                <input disabled=disabled
+                       class="form-control"
+                       name="subGroupName"
+                       type="text"
+                       value="{{subGroup.name}}"/>
+            </td>
+            <td>
+                <select name="groupName"
+                        class="form-control"
+                        data-ng-model="selectedGroup"
+                        data-ng-options="group.name for group in subGroupsCtrl.groups"
+                        disabled>
+                    <option value="">-Select-</option>
+                </select>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,100 @@
+<!--Alert message-->
+<div class="container buttonContainerTop">
+    <div id="alert-settings-success" class="alert alert-success fade in text-center " data-hide="alert"
+         style="display: none">
+    </div>
+    <div id="alert-settings-error" class="alert alert-danger fade in text-center" data-hide="alert"
+         style="display: none">
+    </div>
+    <div id="alert-settings-warn" class="alert alert-warning fade in text-center" data-hide="alert"
+         style="display: none">
+    </div>
+</div>
+<div id="table-panel-settings" class="panel-heading text-center centered">
+    <!--<select id="filter"-->
+    <!--name="subGroup"-->
+    <!--title="Filter by group"-->
+    <!--class="form-control"-->
+    <!--data-ng-model="selectedFilter"-->
+    <!--data-ng-change="homeCtrl.getSettingsByGroup(selectedFilter)"-->
+    <!--data-ng-options="group.name as group.name for group in homeCtrl.groups">-->
+    <!--<option value="">-Select Filter-</option>-->
+    <!--</select>-->
+    <button id="btn-save-settings"
+            data-ng-click="homeCtrl.save()"
+            class="pull-right btn btn-default btn-save"
+            title="Save changes">
+        Save
+    </button>
+    <input id="searchSettings" class="form-control" type="text" data-ng-model="selectedFilter" placeholder="Search">
+
+    <h2 class="heading">Settings</h2>
+    <button data-ng-click="homeCtrl.addRowSettings()"
+            type="button"
+            class="btn btn-default"
+            title="Add a setting">
+        Add
+    </button>
+    &nbsp;
+    &nbsp;
+    <button data-ng-click="homeCtrl.deleteRow()"
+            type="button"
+            class="btn btn-danger"
+            title="Delete a setting">
+        Delete
+    </button>
+</div>
+<!--Settings-->
+<div class="tableContainer container-fluid panel panel-default panel-body centered">
+
+    <table id="settingsTable" data-toggle="table"
+           class="centered-table table table-striped table-responsive table-bordered">
+        <thead>
+        <tr>
+            <th></th>
+            <th class="text-center">Name</th>
+            <th class="text-center">Value</th>
+            <th class="text-center">Group</th>
+            <th class="text-center">Sub-Group</th>
+        </tr>
+        </thead>
+        <tbody data-ng-controller="HomeCtrl">
+        <tr data-ng-repeat="setting in homeCtrl.settings | filter:selectedFilter">
+            <td>
+                <input name="checkbox" type="checkbox"/>
+            </td>
+            <td>
+                <input disabled=disabled
+                       class="form-control"
+                       name="settingKey"
+                       type="text"
+                       value="{{setting.settingKey}}"/>
+            </td>
+            <td>
+                <input class="form-control"
+                       name="settingValue"
+                       type="text"
+                       value="{{setting.settingValue}}"/>
+            </td>
+            <td>
+                <select name="groupName"
+                        class="form-control"
+                        data-ng-model="selectedGroup"
+                        data-ng-options="group.name for group in homeCtrl.groups"
+                        data-ng-change="homeCtrl.resetSubGroups(selectedGroup.name, setting.settingKey)">
+                    <option value="">-Select-</option>
+                </select>
+            </td>
+            <td>
+                <select name="subGroupName"
+                        class="form-control"
+                        data-ng-model="selectedSubGroup"
+                        data-ng-options="subGroup.name for subGroup in homeCtrl.getSubGroupOptions(setting.groupName)"
+                        >
+                    <option value="">-Select-</option>
+                </select>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,67 @@
+<!--Alert message-->
+<div class="container buttonContainerTop">
+    <div id="alert-groups-success" class="alert alert-success fade in text-center " data-hide="alert"
+         style="display: none">
+    </div>
+    <div id="alert-groups-error" class="alert alert-danger fade in text-center" data-hide="alert"
+         style="display: none">
+    </div>
+    <div id="alert-groups-warn" class="alert alert-warning fade in text-center" data-hide="alert"
+         style="display: none">
+    </div>
+</div>
+
+<!--Groups-->
+<div id="table-panel-groups" class="panel-heading text-center small-table table-btn-panel">
+    <button id="btn-save-groups"
+            data-ng-click="groupsCtrl.save()"
+            class="pull-right btn btn-default btn-save"
+            title="Save changes">
+        Save
+    </button>
+    <h2 class="heading">Groups</h2>
+    <button data-ng-click="groupsCtrl.addRowGroups()"
+            type="button"
+            class="btn btn-default"
+            title="Add a gro">
+        Add
+    </button>
+    &nbsp;
+    &nbsp;
+    <button data-ng-click="groupsCtrl.deleteRow()"
+            type="button"
+            class="btn btn-danger"
+            title="Delete a group">
+        Delete
+    </button>
+</div>
+<div id="table-container-groups"
+     class="small-table tableContainer container-fluid panel panel-default panel-heading centered">
+    <table id="groupsTable" data-toggle="table"
+           class="centered-table table table-striped table-responsive table-bordered">
+        <thead>
+        <tr>
+            <th></th>
+            <th class="text-center">Name</th>
+        </tr>
+        </thead>
+        <tbody data-ng-controller="GroupsCtrl">
+        <tr data-ng-repeat="group in groupsCtrl.groups">
+            <td>
+                <input name="checkbox" type="checkbox"/>
+            </td>
+            <td>
+                <input disabled=disabled
+                       class="form-control"
+                       name="groupName"
+                       type="text"
+                       value="{{group.name}}"/>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <hr id="dividerGroups">
+</div>

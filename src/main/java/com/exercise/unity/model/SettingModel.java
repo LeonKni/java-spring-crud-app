@@ -1,5 +1,8 @@
 package com.exercise.unity.model;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 
 /**
@@ -8,35 +11,28 @@ import java.io.Serializable;
  * @author Leon K
  */
 public class SettingModel implements Serializable {
-
-    private String key;
-    private String value;
-    private String description;
+    @NotEmpty
+    @Pattern(regexp = "a-zA-Z0-9")
+    private String settingKey;
+    @NotEmpty
+    private String settingValue;
     private String groupName;
     private String subGroupName;
 
-    public String getKey() {
-        return key;
+    public String getSettingKey() {
+        return settingKey;
     }
 
-    public void setKey(String key) {
-        this.key = key;
+    public void setSettingKey(String settingKey) {
+        this.settingKey = settingKey;
     }
 
-    public String getValue() {
-        return value;
+    public String getSettingValue() {
+        return settingValue;
     }
 
-    public void setValue(String value) {
-        this.value = value;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public void setSettingValue(String settingValue) {
+        this.settingValue = settingValue;
     }
 
     public String getGroupName() {

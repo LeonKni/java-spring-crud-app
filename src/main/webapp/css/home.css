@@ -1,0 +1,33 @@
+#table-panel-settings {
+    background: #222c37;
+    margin-bottom: -25px;
+}
+
+.buttonContainerTop {
+    margin-top: 115px;
+}
+
+#filter {
+    width: 160px;
+}
+
+#searchSettings {
+    width: 282px;
+}
+
+/***** Media Queries *****/
+@media screen and (max-width: 767px) {
+    .buttonContainerTop {
+        margin-top: 135px;
+    }
+
+    #searchSettings {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (min-width: 768px), screen and (max-width: 1199px) {
+    .buttonContainerTop {
+        margin-top: 155px;
+    }
+}

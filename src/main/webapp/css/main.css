@@ -1,0 +1,61 @@
+.table-btn-panel {
+    background: #222c37;
+}
+
+.centered {
+    width: 80%;
+    margin: auto;
+}
+
+.centered-table {
+    background: rgba(25, 140, 112, 0.1);
+}
+
+.centered-table thead {
+    background: #19e3b1;
+}
+
+.centered-table tbody {
+    height: 300px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.tableContainer {
+    max-height: 500px;
+    overflow-y: auto;
+    margin-top: 25px;
+}
+
+.divider {
+    width: 80%;
+}
+
+.small-table {
+    width: 60%;
+}
+
+.btn-add-delete {
+    margin-right: 35px;
+}
+
+.btn-save {
+    width: 20%;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 48px;
+    height: 6px;
+}
+
+/***** Media Queries *****/
+@media screen and (max-width: 375px) {
+    .tableContainer {
+        height: 270px;
+    }
+
+    .centered {
+        width: 95%;
+    }
+}

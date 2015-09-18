@@ -1,0 +1,29 @@
+<!--Nav Container-->
+<nav id="nav" class="navbar navbar-default navbar-fixed-top navbar-inverse">
+    <div class="container-fluid">
+        <div class="col-lg-4">
+            <div class="navbar-header">
+                <!--Collapse nav button-->
+                <button type="button"
+                        class="navbar-toggle"
+                        data-toggle="collapse"
+                        data-target="#navCollapse"
+                        aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <h1 class="heading text-center">Admin View</h1>
+        </div>
+        <div class="collapse navbar-collapse col-lg-4" id="navCollapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a ui-sref="home">Settings</a></li>
+                <li><a ui-sref="groups">Groups</a></li>
+                <li><a ui-sref="subGroups">Sub-Groups</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
