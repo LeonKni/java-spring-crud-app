@@ -1,10 +1,10 @@
-package com.exercise.unity.dao.impl;
+package com.crud.app.dao.impl;
 
-import com.exercise.unity.dao.SettingsDAO;
-import com.exercise.unity.domain.Group;
-import com.exercise.unity.domain.SubGroup;
-import com.exercise.unity.model.SettingModel;
-import com.exercise.unity.util.DatabaseConnectionUtil;
+import com.crud.app.dao.SettingsDAO;
+import com.crud.app.domain.Group;
+import com.crud.app.domain.SubGroup;
+import com.crud.app.model.SettingModel;
+import com.crud.app.util.DatabaseConnectionUtil;
 import org.apache.commons.dbutils.DbUtils;
 import org.springframework.stereotype.Repository;
 

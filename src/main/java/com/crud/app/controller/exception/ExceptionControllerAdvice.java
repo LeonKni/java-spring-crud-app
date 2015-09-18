@@ -1,4 +1,4 @@
-package com.exercise.unity.controller.exception;
+package com.crud.app.controller.exception;
 
 import java.sql.SQLException;
 

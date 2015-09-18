@@ -1,6 +1,6 @@
-package com.exercise.unity.dao;
+package com.crud.app.dao;
 
-import com.exercise.unity.dao.impl.SettingsDAOImpl;
+import com.crud.app.dao.impl.SettingsDAOImpl;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

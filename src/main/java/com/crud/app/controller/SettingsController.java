@@ -1,9 +1,9 @@
-package com.exercise.unity.controller;
+package com.crud.app.controller;
 
-import com.exercise.unity.domain.Group;
-import com.exercise.unity.domain.SubGroup;
-import com.exercise.unity.model.SettingModel;
-import com.exercise.unity.service.SettingsService;
+import com.crud.app.domain.Group;
+import com.crud.app.domain.SubGroup;
+import com.crud.app.model.SettingModel;
+import com.crud.app.service.SettingsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

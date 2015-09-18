@@ -1,8 +1,8 @@
-package com.exercise.unity.dao;
+package com.crud.app.dao;
 
-import com.exercise.unity.domain.Group;
-import com.exercise.unity.domain.SubGroup;
-import com.exercise.unity.model.SettingModel;
+import com.crud.app.domain.Group;
+import com.crud.app.domain.SubGroup;
+import com.crud.app.model.SettingModel;
 
 import java.sql.SQLException;
 import java.util.Collection;

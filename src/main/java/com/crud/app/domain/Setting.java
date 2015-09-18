@@ -1,4 +1,4 @@
-package com.exercise.unity.domain;
+package com.crud.app.domain;
 
 import org.hibernate.validator.constraints.NotEmpty;
 

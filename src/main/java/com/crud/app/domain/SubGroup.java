@@ -1,4 +1,4 @@
-package com.exercise.unity.domain;
+package com.crud.app.domain;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;

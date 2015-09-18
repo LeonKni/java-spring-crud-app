@@ -1,4 +1,4 @@
-package com.exercise.unity.model;
+package com.crud.app.model;
 
 import org.hibernate.validator.constraints.NotEmpty;
 

@@ -1,9 +1,8 @@
-package com.exercise.unity.service;
+package com.crud.app.service;
 
-import com.exercise.unity.domain.Group;
-import com.exercise.unity.domain.Setting;
-import com.exercise.unity.domain.SubGroup;
-import com.exercise.unity.model.SettingModel;
+import com.crud.app.domain.Group;
+import com.crud.app.domain.SubGroup;
+import com.crud.app.model.SettingModel;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
