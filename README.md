@@ -1,7 +1,7 @@
 # README #
 
 ### What is this repository for? ###
-* Create, Read, Update, Delete, items(game settings) from a database via UI/API
+* Create, Read, Update, Delete, items from a database via UI/API
 
 ### How do I get set up? ###
 * Configuration:
