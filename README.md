@@ -8,7 +8,7 @@
     * Install Java 7+
     * Install Apache Tomcat web server locally
 
-* Database configuration: app will be connect to a hosted MYSQL database
+* Database configuration: app will be connect to a hosted MYSQL database on Google Cloud SQL.
 
 * How to run tests:
     * Gradle script executes tests by default when building project
