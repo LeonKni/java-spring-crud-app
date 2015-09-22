@@ -17,7 +17,7 @@
 
 * Deployment instructions:
     * Drop .war file in your local Tomcat's /webapps directory.
-        * ex:  C:/apache-tomcat-7.0.63/webapps/java-spring-crud-app-1.0.war
+        * ex:  C:/apache-tomcat-7.0.63/webapps/java_spring_crud_app_1_0.war
     * Start Tomcat server, visit localhost:8080/war_file_name/ to view app
 
 * Repo owner or admin:
